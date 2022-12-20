@@ -51,14 +51,11 @@ def downloadVideo(link, name):
     formatOfVideo = input(
         'In Which format you want to download:\n360p\n720p\n1080p\n Type your format: ')
     if formatOfVideo.startswith('360') and (formatOfVideo.endswith('p') or ('0')):
-        youtubeVideo.streams.get_by_itag(18).download(output_path=os.path.abspath(
-            'E:\\code\\pythonp\\projects\\Serious projects\\1 youtube downloader'), filename=f"{name}.mp4")
+        youtubeVideo.streams.get_by_itag(18).download()
     elif formatOfVideo.startswith('720') and (formatOfVideo.endswith('p') or ('0')):
-        youtubeVideo.streams.get_by_itag(22).download(output_path=os.path.abspath(
-            'E:\\code\\pythonp\\projects\\Serious projects\\1 youtube downloader'), filename=f"{name}.mp4")
+        youtubeVideo.streams.get_by_itag(22).download()
     elif formatOfVideo.startswith('1080') and (formatOfVideo.endswith('p') or ('0')):
-        youtubeVideo.streams.get_by_itag(137).download(output_path=os.path.abspath(
-            'E:\\code\\pythonp\\projects\\Serious projects\\1 youtube downloader'), filename=f"{name}.mp4")
+        youtubeVideo.streams.get_by_itag(137).download()
     else:
         print('Please enter the correct input.')
 
